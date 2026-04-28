@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    margin: 40px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- HEADER --- */
+.header {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #ff0000; /* Toque de color rockero */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-list li a:hover {
+    color: #ff0000;
+}
+
+.menu-toggle {
+    display: none; /* Se activa en móvil */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://raw.githubusercontent.com/Riwi-io-Medellin/performance-test-M2/refs/heads/main/assets/img/img-9.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff0000;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* --- TABLES (EVENTS) --- */
+.events__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+
+.events__table th, .events__table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+.events__table th {
+    background-color: #222;
+    color: #ff0000;
+}
+
+.events__table button {
+    background: transparent;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+/* --- ABOUT SECTION --- */
+.about__content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about__content img {
+    width: 50%;
+    border-radius: 8px;
+}
+
+/* --- MULTIMEDIA (GRID) --- */
+.media__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en desktop */
+    gap: 15px;
+}
+
+.media__grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: grayscale(50%);
+    transition: 0.5s;
+}
+
+.media__grid img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* --- FOOTER --- */
+.footer {
+    background: #000;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.social a { color: white; text-decoration: none; font-size: 0.9rem; }
+
+/* --- RESPONSIVE DESIGN (MEDIA QUERIES) --- */
+
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* Aquí entraría el menú hamburguesa con JS */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .about__content {
+        flex-direction: column;
+    }
+
+    .about__content img {
+        width: 100%;
+    }
+
+    .media__grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+    }
+
+    .footer__content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .social {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .media__grid {
+        grid-template-columns: 1fr; /* 1 columna en móvil */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+    }
+    .nav-list.show {
+        display: flex;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 20px 0;
+        z-index: 999;
+    }
+}

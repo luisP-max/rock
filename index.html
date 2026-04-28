@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shattered Riffs</title>
+    <link rel="shortcut icon" href="./assets/icons/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-content">
+            <h1 class="logo">Shattered Riffs</h1>
+
+            <!-- Nav for desktop / hamburger for mobile -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Hint for JS (optional extra points) -->
+            <button id="menu-toggle" class="menu-toggle" aria-controls="nav-menu" aria-expanded="false">☰</button>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero__overlay">
+                <h2>Rock the Night - Upcoming Tour</h2>
+                <a href="#events" class="btn">View Events</a>
+            </div>
+        </section>
+
+        <!-- EVENTS -->
+        <section id="events" class="events container">
+            <h2>Upcoming Events</h2>
+
+            <!-- Extra points: table -->
+            <table class="events__table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>City</th>
+                        <th>Venue</th>
+                        <th>Tickets</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>15 May</td>
+                        <td>Madrid</td>
+                        <td>Sala Sol</td>
+                        <td><button>Buy</button></td>
+                    </tr>
+                    <tr>
+                        <td>18 May</td>
+                        <td>Barcelona</td>
+                        <td>Razzmatazz</td>
+                        <td><button>Buy</button></td>
+                    </tr>
+                    <tr>
+                        <td>22 May</td>
+                        <td>Valencia</td>
+                        <td>Moon Club</td>
+                        <td><button>Buy</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="about container">
+            <h2>About the Band</h2>
+
+            <div class="about__content">
+                <img src="./assets/img/img-1.jpg" alt="Band photo">
+
+                <article>
+                    <p>
+                        Shattered Riffs is a high-energy rock band known for powerful live performances
+                        and raw sound.
+                    </p>
+
+                    <!-- Required list -->
+                    <h3>Our Influences</h3>
+                    <ul>
+                        <li>Classic Rock</li>
+                        <li>Hard Rock</li>
+                        <li>Alternative</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- MEDIA -->
+        <section id="media" class="media container">
+            <h2>Multimedia</h2>
+
+            <div class="media__grid">
+                <img src="./assets/img/img-2.jpg" alt="imagen">
+                <img src="./assets/img/img-3.jpg" alt="imagen">
+                <img src="./assets/img/img-4.jpg" alt="imagen">
+                <img src="./assets/img/img-5.jpg" alt="imagen">
+                <img src="./assets/img/img-6.jpg" alt="imagen">
+                <img src="./assets/img/img-7.jpg" alt="imagen">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="footer">
+        <div class="container footer__content">
+            <p>© <span id="year"></span> Shattered Riffs</p>
+
+            <!-- Another possible list -->
+            <ul class="social">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Spotify</a></li>
+                <li><a href="#">YouTube</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
